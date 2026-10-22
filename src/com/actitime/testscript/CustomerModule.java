@@ -86,8 +86,6 @@ public class CustomerModule extends BaseClass {
 		
 		driver.findElement(By.xpath("//div[@class='edit_customer_sliding_panel sliding_panel']//div[@class='closeButton']")).click();
 		
-		
-		
 		String locatorCustName = newModifyCustomerName+" ";
 		By expecLocator = By.xpath("//div[text()='"+locatorCustName+"']");
 		
@@ -99,19 +97,33 @@ public class CustomerModule extends BaseClass {
 	}
 	
 	@Test
-	public void testDeleteCustomer() throws EncryptedDocumentException, IOException {
+	public void testDeleteCustomer() throws EncryptedDocumentException, IOException, InterruptedException {
 		
 		Reporter.log("Delete Cutomer",true);
+		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 		timeTrackPage.setTasks();
 		
-		String delCustomerName = FileLib.getExcelData("TestDeleteCustomer", 1, 3);
-		WebElement customer = driver.findElement(By.xpath("//div[contains(text(),'"+delCustomerName+"')]"));
+		String delCustomerName = FileLib.getExcelData("TestDeleteCustomer", 1, 3)+" ";
+		WebElement customer = driver.findElement(By.xpath("//div[text()='"+delCustomerName+"']"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(customer).perform();
 		driver.findElement(By.xpath("//div[contains(text(),'"+delCustomerName+"')]/../div[@class='editButton available']")).click();
 		
+		waits.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//div[@class='action']")));
+		driver.findElement(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//div[@class='action']")).click();
 		
+		waits.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//div[text()='Delete']")));
+		driver.findElement(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//div[text()='Delete']")).click();
+		
+		waits.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//span[@id='customerPanel_deleteConfirm_submitTitle']")));
+		driver.findElement(By.xpath("//div[@id='taskListBlock']//div[@class='edit_customer_sliding_panel sliding_panel']//span[@id='customerPanel_deleteConfirm_submitTitle']")).click();
+		
+		waits.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='innerContainer']//div[@class='itemsContainer']//div[@class='node customerNode notSelected']")));
+		
+		Assert.assertTrue(
+				driver.findElements(By.xpath("//div[text()='"+delCustomerName+"']")).isEmpty()
+				);
 	}
 
 }

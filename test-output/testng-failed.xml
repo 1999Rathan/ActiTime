@@ -7,9 +7,9 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="logout"/>
+          <include name="testDeleteCustomer"/>
           <include name="initilizePages"/>
           <include name="login"/>
-          <include name="deleteCustomer"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- com.actitime.testscript.CustomerModule -->

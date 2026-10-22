@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[openBrowser]]>
@@ -11,72 +11,56 @@
       <![CDATA[Delete Cutomer]]>
     </line>
     <line>
+      <![CDATA[testDeleteCustomer is succusfull ]]>
+    </line>
+    <line>
+      <![CDATA[logout]]>
+    </line>
+    <line>
       <![CDATA[closeBrowser]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-10-22T09:31:08 IST" name="Default suite" finished-at="2026-10-22T09:31:13 IST" duration-ms="5517">
+  <suite started-at="2026-10-22T18:53:41 IST" name="Default suite" finished-at="2026-10-22T18:53:58 IST" duration-ms="16688">
     <groups>
     </groups>
-    <test started-at="2026-10-22T09:31:08 IST" name="Default test" finished-at="2026-10-22T09:31:13 IST" duration-ms="5517">
+    <test started-at="2026-10-22T18:53:41 IST" name="Default test" finished-at="2026-10-22T18:53:58 IST" duration-ms="16688">
       <class name="com.actitime.testscript.CustomerModule">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T09:31:08 IST" name="openBrowser" finished-at="2026-10-22T09:31:10 IST" duration-ms="1862" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:41 IST" name="openBrowser" finished-at="2026-10-22T18:53:43 IST" duration-ms="1773" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[openBrowser]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="deleteCustomer()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T09:31:10 IST" name="deleteCustomer" finished-at="2026-10-22T09:31:13 IST" duration-ms="3128" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because the return value of "org.apache.poi.ss.usermodel.Workbook.getSheet(String)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because the return value of "org.apache.poi.ss.usermodel.Workbook.getSheet(String)" is null
-at com.actitime.generic.ListenerImpl.onTestSuccess(ListenerImpl.java:34)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:119)
-at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:285)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:777)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCustomer -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T09:31:10 IST" name="login" finished-at="2026-10-22T09:31:10 IST" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:43 IST" name="login" finished-at="2026-10-22T18:53:43 IST" duration-ms="236" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[login]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="initilizePages()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T09:31:10 IST" name="initilizePages" finished-at="2026-10-22T09:31:10 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="initilizePages()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:43 IST" name="initilizePages" finished-at="2026-10-22T18:53:43 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilizePages -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T09:31:13 IST" name="closeBrowser" finished-at="2026-10-22T09:31:13 IST" duration-ms="256" status="PASS">
+        <test-method signature="testDeleteCustomer()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:43 IST" name="testDeleteCustomer" finished-at="2026-10-22T18:53:57 IST" duration-ms="13778" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Delete Cutomer]]>
+            </line>
+            <line>
+              <![CDATA[testDeleteCustomer is succusfull ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDeleteCustomer -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:57 IST" name="logout" finished-at="2026-10-22T18:53:58 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.actitime.testscript.CustomerModule@6069db50]" started-at="2026-10-22T18:53:58 IST" name="closeBrowser" finished-at="2026-10-22T18:53:58 IST" duration-ms="280" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[closeBrowser]]>
