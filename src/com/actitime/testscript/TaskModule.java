@@ -6,7 +6,7 @@ public class TaskModule {
 	
 	@Test
 	public void createTask() {
-		System.out.println("Task created successfully - Feature Create Task");
+		System.out.println("Task created successfully - Feature Update Task");
 	}
 
 }
